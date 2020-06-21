@@ -1,5 +1,11 @@
-.content .col-md-8 .navbar{
-   
+.btn-info{
+    width: 75px;
+    background-color: #7700BB ;
+    color: white;
+    border-radius:20px;
+    margin-left:45px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .content .row1 .col-md-8 .navbar a{
     width: 75px;
@@ -39,4 +45,22 @@ img{
 }
 body{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+/* .custom-select{
+    width: 15%
+}
+.form-control{
+    display: inline;
+    width: 15%;
+    
+} */
+.btn-secondary{
+    width: 75px;
+    background-color: #7700BB ;
+    color: white;
+    border-radius:20px;
+    margin-left:45px;  
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle{
+    background-color: green;
 }
