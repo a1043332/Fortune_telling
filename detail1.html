@@ -97,19 +97,21 @@
             </div>
         </nav>
     </div>
-    <script>
+  
+    <div class='helloUser'>
+    </div>  
+      <script>
         var userName='您好訪客';
         if(Cookies.get('userId')){
             userName = Cookies.get('userId');      
         }
         function newUser(){
             document.querySelector('.helloUser').innerHTML = userName;
-            console.log('userName');
-        } 
+            console.log(userName);
+        }
+        
         newUser();
     </script>
-    <div class='helloUser'>
-    </div>    
     <div class="modal" tabindex="-1" role="dialog">
      <div class="modal-dialog" role="document"> 
         <div class="modal-content">
