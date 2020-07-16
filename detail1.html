@@ -110,22 +110,30 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
             </div>
             <div class="modal-body">
-                               <form action="">
+     <form action="">
         帳號<input type="text" name="" id="accountID" class="accountClass">
         密碼 <input type="password" name="" id="passwordID" class="passwordClass">
-        <input type="submit" name="" id="submittID"  class="submitClass" value="送出" >
-        <input type="reset" name="" id="resetID" class="resetClass" value="重設">
+
     </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+                <button type="button" class="btn btn-primary" onclick='signIn()'>登入</button>
             </div>
        </div>
    </div>
 </div>
    <button class="btn btn-primary showModal" id="my-btn" onclick="showModal()">show</button>
 
+    <script>
+        function signIn(){
+            var x=$('.accountClass').value;
+            Cookies.set('userId',x);
+            console.log('登入，帳號為：'+Cookies.get('userId'));
+        }
+    </script>
+    
+    
     <div class="content">
         <div class="container">
 
