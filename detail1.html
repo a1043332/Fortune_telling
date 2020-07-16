@@ -102,8 +102,8 @@
         if(Cookies.get('userId')){
             userName = Cookies.get('userId');      
         }
-        function newUser(e){
-            document.querySelector(".helloUser").innerHTML = userName;
+        function newUser(){
+            document.querySelector('.helloUser').innerHTML = userName;
             console.log('userName');
         } 
         newUser();
