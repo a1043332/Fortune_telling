@@ -127,7 +127,7 @@
 
     <script>
         function signIn(){
-            var x=$('.accountClass').value;
+            var x=$('.accountClass').val();
             Cookies.set('userId',x);
             console.log('登入，帳號為：'+Cookies.get('userId'));
         }
