@@ -102,8 +102,9 @@
     </div>  
       <script>
         var userName='您好訪客';
-        if(Cookies.get('userId')){
-            userName = Cookies.get('userId');      
+        if(Cookies.get('userId')!=null){
+            userName = Cookies.get('userId');
+            console.log('if'+Cookies.get('userId'));
         }
         function newUser(){
             document.querySelector('.helloUser').innerHTML = userName;
