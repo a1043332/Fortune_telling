@@ -28,4 +28,5 @@ function showZodiac(){
 }
 function buybuybuy(){
     document.location.href="buySuccess.html";
+    console.log('aaa');
 }
