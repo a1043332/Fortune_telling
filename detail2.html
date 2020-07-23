@@ -18,6 +18,30 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <title>商品詳細</title>
+    <script>
+        var tId= Math.random()*10000;
+        window.dataLayer = window.dataLayer || []
+        dataLayer.push({
+           'transactionId': tId,
+           'transactionAffiliation': 'Acme Clothing',
+           'transactionTotal': 38.26,
+           'transactionTax': 1.29,
+           'transactionShipping': 5,
+           'transactionProducts': [{
+               'sku': 'DD55',
+               'name': 'Phone',
+               'category': 'Apparel',
+               'price': 30.00,
+               'quantity': 1
+           },{
+               'sku': 'DD66',
+               'name': 'Cooker',
+               'category': 'Apparel',
+               'price': 5.99,
+               'quantity': 10
+           }]
+        });
+        </script>
      <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -120,7 +144,7 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select></form>
-                        <button type="button" class="btn btn-primary">購買</button>
+                            <button type="button" class="btn btn-primary buybuybtn" onclick="buybuybuy()">購買</button>
                     </div>
                 </div>
             </br> </br> </br>
