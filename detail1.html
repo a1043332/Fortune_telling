@@ -167,7 +167,7 @@
     <script>
         function signIn(){
             var x=$('.accountClass').val();
-            Cookies.set('userId',x,{SameSite:'None'});
+            Cookies.set('userId',x,{SameSite:'Lax'});
             console.log('登入，帳號為：'+Cookies.get('userId')+'OAq');
             newUser();
         }
