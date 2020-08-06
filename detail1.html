@@ -138,7 +138,7 @@
     <div class='helloUser'>
     </div>  
       <script>
-        var userName='您好訪客';   
+        var userName='您好訪客，只要隨便輸入帳號就能登入，登入並不會有任何改變，只是測測 UserId 功能';   
         function newUser(){
             if(Cookies.get('userId')){
                 userName = Cookies.get('userId');        
@@ -168,7 +168,7 @@
        </div>
    </div>
 </div>
-   <button class="btn btn-primary showModal" id="my-btn" onclick="showModal()">show</button>
+   <button class="btn btn-primary showModal" id="my-btn" onclick="showModal()">登入</button>
 
     <script>
         function signIn(){
