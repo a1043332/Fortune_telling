@@ -65,6 +65,12 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
+
+
+
+    
+
+
     
     
     
@@ -193,7 +199,7 @@
                         <p>價格：80$</p>
                        
                         <form class="form-inline">
-                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">數量</label>
+                            <label class="my-1 mr-2 goodsNumber" for="inlineFormCustomSelectPref">數量</label>
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                                 <option selected>1</option>
                                 <option value="1">1</option>
@@ -203,6 +209,17 @@
                                 <option value="5">5</option>
                             </select></form>
                         <button type="button" class="btn btn-primary buybuybtn" onclick="buybuybuy()">購買</button>
+                        <button type="button" class="btn btn-primary buybuybtn" onclick=" addToCar()">加入購物車</button>
+                        <script>
+                            function addToCar(){
+                                element = document.querySelector('.goodsNumber');
+                                var x=$('.accountClass').val();
+                                Cookies.set('goodsType',x,{SameSite:'Lax'});
+                                Cookies.set('good',x,{SameSite:'Lax'});
+                                console.log('登入，帳號為：'+Cookies.get('userId')+'OAq');
+                                newUser();
+                            }
+                        </script>
                     </div>
                 </div>
             </br> </br> </br>
