@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-  
+
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -21,42 +21,45 @@
         crossorigin="anonymous"></script>
     <title>商品詳細</title>
     <script>
-        var tId= Math.random()*10000;
+        var tId = Math.random() * 10000;
         window.dataLayer = window.dataLayer || []
         dataLayer.push({
-           'transactionId': tId,
-           'transactionAffiliation': 'Acme Clothing',
-           'transactionTotal': 38.26,
-           'transactionTax': 1.29,
-           'transactionShipping': 5,
-           'transactionProducts': [{
-               'sku': 'DD55',
-               'name': 'Phone',
-               'category': 'Apparel',
-               'price': 30.00,
-               'quantity': 1
-           },{
-               'sku': 'DD66',
-               'name': 'Cooker',
-               'category': 'Apparel',
-               'price': 5.99,
-               'quantity': 10
-           }]
+            'transactionId': tId,
+            'transactionAffiliation': 'Acme Clothing',
+            'transactionTotal': 38.26,
+            'transactionTax': 1.29,
+            'transactionShipping': 5,
+            'transactionProducts': [{
+                'sku': 'DD55',
+                'name': 'Phone',
+                'category': 'Apparel',
+                'price': 30.00,
+                'quantity': 1
+            }, {
+                'sku': 'DD66',
+                'name': 'Cooker',
+                'category': 'Apparel',
+                'price': 5.99,
+                'quantity': 10
+            }]
         });
-        </script>
-     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WF8NMDD');</script>
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WF8NMDD');</script>
     <!-- End Google Tag Manager -->
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVQKCJ6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVQKCJ6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -101,17 +104,17 @@
                         <a class="nav-link" href="#">名家文章</a>
                     </li>
                     <li class="nav-item" style="margin-right:95px">
-                            <a class="nav-link" href="#">好物商城</a>
-                        </li>
-                        <li class="nav-item" >
-                            <a class="nav-link" href="#">登入</a>
-                        </li>
+                        <a class="nav-link" href="#">好物商城</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">登入</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">註冊</a>
                     </li>
                     <li class="nav-item active">
-                            <a class="nav-link" href="crm.html">客戶管理 <span class="sr-only">(current)</span></a>
-                          </li>
+                        <a class="nav-link" href="crm.html">客戶管理 <span class="sr-only">(current)</span></a>
+                    </li>
 
                 </ul>
 
@@ -119,138 +122,150 @@
         </nav>
     </div>
     <div class='helloUser'>
-    </div>  
-      <script>
-        var userName='您好訪客';   
-        function newUser(){
-            if(Cookies.get('userId')){
-                userName = Cookies.get('userId');        
+    </div>
+    <script>
+        var userName = '您好訪客';
+        function newUser() {
+            if (Cookies.get('userId')) {
+                userName = Cookies.get('userId');
             }
             document.querySelector('.helloUser').innerHTML = userName;
-        }      
+        }
         newUser();
     </script>
     <div class="modal" tabindex="-1" role="dialog">
-     <div class="modal-dialog" role="document"> 
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
-            </div>
-            <div class="modal-body">
-     <form action="" >
-        帳號<input type="text" name="" id="accountID" class="accountClass">
-        密碼 <input type="password" name="" id="passwordID" class="passwordClass">
-
-    </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick='signIn()'>登入</button>
-            </div>
-       </div>
-   </div>
-    <div class="content">
-        <div class="container">
-
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-6" style="padding-left:120px;padding-right:120px;">
-                        <img src="pictures/z.png" alt="">
-                    </div>
-                    <div class="col-md-6">
-                        <h3 style="padding-bottom:40px;padding-top:20px;">生肖占卜</h3>
-                        <p>簡介：</p>
-                        <p>自生肖觀念在民間出現以後，它隨著算命術的盛行在民間流傳不衰，民間迷信認為，五行中的每一種要素都是相互 ... 可以利用不同的五行要素來協調，使自己的生活及所從事的工作能順心如意，從而生成一套生肖決定命運的算命術。
-                        </p>
-                        </br>
-                        <p>老師：王大胖</p>
-                        <p>價格：99$</p>
-                       
-                        <form class="form-inline">
-                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">數量</label>
-                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                <option selected>1</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select></form>
-                            <button type="button" class="btn btn-primary buybuybtn" onclick="buybuybuy()">購買</button>
-                    </div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </br> </br> </br>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h4>其他好物</h4>
-                    </div>
-                    <div class="col-md-3">
-                            <div class="outer">
-                                    <div class="upper">
-                                        <img src="pictures/c.png" alt="">
-                                        <div class="innertext">
-                                            <span>廣告</span>
-                                        </div>
-                                    </div>
-                                    <div class="lower">
-                                        <h3>星座匹配</h3>
-                                        <p>60$</p>
-    
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="col-md-3">
-                                <div class="outer">
-                                    <div class="upper">
-                                        <img src="pictures/21934570306099_505.jpg" alt="">
-                                        <div class="innertext">
-                                            <span>廣告</span>
-                                        </div>
-                                    </div>
-                                    <div class="lower">
-                                        <h3>塔羅牌體驗</h3>
-                                        <p>80$</p>
-    
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                    <div class="outer">
-                                            <div class="upper">
-                                                <img src="pictures/z.png" alt="">
-                                                <div class="innertext">
-                                                    <span>廣告</span>
-                                                </div>
-                                            </div>
-                                            <div class="lower">
-                                                <h3>生肖占卜</h3>
-                                                <p>99$</p>
-            
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="col-md-3">
-                                        <div class="outer">
-                                                <div class="upper">
-                                                    <img src="pictures/c.png" alt="">
-                                                    <div class="innertext">
-                                                        <span>廣告</span>
-                                                    </div>
-                                                </div>
-                                                <div class="lower">
-                                                    <h3>星座匹配</h3>
-                                                    <p>60$</p>
-                
-                                                </div>
-                                            </div>
-                                    </div>
+                <div class="modal-body">
+                    <form action="">
+                        帳號<input type="text" name="" id="accountID" class="accountClass">
+                        密碼 <input type="password" name="" id="passwordID" class="passwordClass">
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick='signIn()'>登入</button>
                 </div>
             </div>
         </div>
-    </div>
-</br></br>
-<!-- <div class="footer">
+
+        <button class="btn btn-primary showModal" id="my-btn" onclick="showModal()">show</button>
+
+        <script>
+            function signIn() {
+                var x = $('.accountClass').val();
+                Cookies.set('userId', x, { SameSite: 'Lax' });
+                console.log('登入，帳號為：' + Cookies.get('userId') + 'OAq');
+                newUser();
+            }
+        </script>
+        <div class="content">
+            <div class="container">
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6" style="padding-left:120px;padding-right:120px;">
+                            <img src="pictures/z.png" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 style="padding-bottom:40px;padding-top:20px;">生肖占卜</h3>
+                            <p>簡介：</p>
+                            <p>自生肖觀念在民間出現以後，它隨著算命術的盛行在民間流傳不衰，民間迷信認為，五行中的每一種要素都是相互 ...
+                                可以利用不同的五行要素來協調，使自己的生活及所從事的工作能順心如意，從而生成一套生肖決定命運的算命術。
+                            </p>
+                            </br>
+                            <p>老師：王大胖</p>
+                            <p>價格：99$</p>
+
+                            <form class="form-inline">
+                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">數量</label>
+                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <option selected>1</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select></form>
+                            <button type="button" class="btn btn-primary buybuybtn" onclick="buybuybuy()">購買</button>
+                        </div>
+                    </div>
+                    </br> </br> </br>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4>其他好物</h4>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="outer">
+                                <div class="upper">
+                                    <img src="pictures/c.png" alt="">
+                                    <div class="innertext">
+                                        <span>廣告</span>
+                                    </div>
+                                </div>
+                                <div class="lower">
+                                    <h3>星座匹配</h3>
+                                    <p>60$</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="outer">
+                                <div class="upper">
+                                    <img src="pictures/21934570306099_505.jpg" alt="">
+                                    <div class="innertext">
+                                        <span>廣告</span>
+                                    </div>
+                                </div>
+                                <div class="lower">
+                                    <h3>塔羅牌體驗</h3>
+                                    <p>80$</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="outer">
+                                <div class="upper">
+                                    <img src="pictures/z.png" alt="">
+                                    <div class="innertext">
+                                        <span>廣告</span>
+                                    </div>
+                                </div>
+                                <div class="lower">
+                                    <h3>生肖占卜</h3>
+                                    <p>99$</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="outer">
+                                <div class="upper">
+                                    <img src="pictures/c.png" alt="">
+                                    <div class="innertext">
+                                        <span>廣告</span>
+                                    </div>
+                                </div>
+                                <div class="lower">
+                                    <h3>星座匹配</h3>
+                                    <p>60$</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </br></br>
+        <!-- <div class="footer">
    <div class="container">
        <div class="row" style="background-color: #f8f9fa ;">
            <div class="col-md-4 text-left">
@@ -269,12 +284,12 @@
        </div>
    </div>
 </div> -->
-<script>
-    function showModal() {
-         $('.modal').modal('show'); 
-    }
-</script>
-<script src="main.js"></script>
+        <script>
+            function showModal() {
+                $('.modal').modal('show');
+            }
+        </script>
+        <script src="main.js"></script>
 
 </body>
 
