@@ -94,47 +94,7 @@
             </div>
         </nav>
     </div>
-    <div class='helloUser'>
-    </div>  
-      <script>
-        var userName='您好訪客，只要隨便輸入帳號就能登入，登入並不會有任何改變，只是測測 UserId 功能';   
-        function newUser(){
-            if(Cookies.get('userId')){
-                userName = Cookies.get('userId');        
-            }
-            document.querySelector('.helloUser').innerHTML ='Hello,'+ userName;
-        }      
-        newUser();
-    </script>
-    <div class="modal" tabindex="-1" role="dialog">
-     <div class="modal-dialog" role="document"> 
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
-            </div>
-            <div class="modal-body">
-     <form action="" >
-        帳號<input type="text" name="" id="accountID" class="accountClass">
-        密碼 <input type="password" name="" id="passwordID" class="passwordClass">
-
-    </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick='signIn()'>登入</button>
-            </div>
-       </div>
-   </div>
-   <button class="btn btn-primary showModal" id="my-btn" onclick="showModal()">登入</button>
-   <script>
-    function signIn() {
-        var x = $('.accountClass').val();
-        Cookies.set('userId', x, { SameSite: 'Lax' });
-        console.log('登入，帳號為：' + Cookies.get('userId') + 'OAq');
-        newUser();
-    }
-</script>
+    
     <div class="content">
         <div class="container">
 
