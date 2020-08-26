@@ -209,7 +209,9 @@
                                 <option value="5">5</option>
                             </select></form>
                         <button type="button" class="btn btn-primary buybuybtn" onclick="buybuybuy()">購買</button>
-                        <button type="button" class="btn btn-primary buybuybtn" onclick=" addToCar()">加入購物車</button>
+                        <button type="button" class="btn btn-primary buybuybtn" onclick=" addToCar();dataLayer.push({
+                            'page':'virtual/detail1'
+                         });">加入購物車</button>
                         <script>
                             function addToCar(){
                                 element = document.querySelector('.goodsNumber');
